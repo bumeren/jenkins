@@ -7,4 +7,20 @@ pipeline {
          }
       }
     }
+   post {
+      always {
+         echo "RUN STEPS"
+      }
+     
+      success {
+         echo "SCRIPT SUCCESS"
+      }
+      
+      failure {
+         echo "WHEN SCRIPT FAILURE"
+      }
+      
+      unstable {
+         echo "WHEN SCRIPT UNSTABLE"
+      }
 }
