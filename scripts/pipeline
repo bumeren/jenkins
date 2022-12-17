@@ -1,0 +1,10 @@
+pipeline {
+   agent any 
+   stages {
+      stage('check access site') {
+         steps {
+             sh 'curl -Iv https://court.gov.ua'
+         }
+      }
+    }
+}
