@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('check access site') {
          steps {
-             sh 'ping ukr.net'
+             sh 'echo "HELLO WORLD"'
          }
       }
     }
@@ -23,5 +23,7 @@ pipeline {
       unstable {
          echo "WHEN SCRIPT UNSTABLE"
       }
+      abort {
+         echo "SCRIPT ABORTED by admin"
     }
 }
