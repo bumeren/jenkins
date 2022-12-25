@@ -28,7 +28,7 @@ pipeline {
       unstable {
          echo "WHEN SCRIPT UNSTABLE"
       }
-      abort {
+      aborted {
          echo "SCRIPT ABORTED by admin"
       }
    }
