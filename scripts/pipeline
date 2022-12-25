@@ -3,7 +3,12 @@ pipeline {
    stages {
       stage('check access site') {
          steps {
-             sh 'echo "HELLO WORLD"'
+             sh 'curl https://court.gov.ua'
+         }
+      }
+      stage('output greeting') {
+         steps {
+             sh "echo 'Hello World'"
          }
       }
     }
@@ -25,5 +30,5 @@ pipeline {
       }
       abort {
          echo "SCRIPT ABORTED by admin"
-    }
+      }
 }
