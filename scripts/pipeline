@@ -31,4 +31,5 @@ pipeline {
       abort {
          echo "SCRIPT ABORTED by admin"
       }
+   }
 }
