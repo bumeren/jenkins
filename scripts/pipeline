@@ -3,7 +3,16 @@ pipeline {
    stages {
       stage('check access site') {
          steps {
-             sh 'curl https://court.gov.ua'
+             parallel(
+                chrome: {
+                   sh 'echo "Running on chrome"'
+                },
+                mozilla: {
+                   sh 'echo "Running on mozilla"'
+                },
+                safari: {
+                   sh 'echo "Running on safari"'
+                }
          }
       }
       stage('output greeting') {
