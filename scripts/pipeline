@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('check access site') {
          steps {
-             sh 'curl -Iv https://court.gov.ua'
+             sh 'ping ukr.net'
          }
       }
     }
