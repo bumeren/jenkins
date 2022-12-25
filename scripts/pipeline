@@ -13,6 +13,7 @@ pipeline {
                 safari: {
                    sh 'echo "Running on safari"'
                 }
+             )
          }
       }
       stage('output greeting') {
